@@ -30,7 +30,7 @@
     "posttest": "npm run lint",
     "test:dev": "lb-mocha --allow-console-logs DIST/test/**/*.js && npm run posttest",
     "prestart": "npm run build:current",
-    "start": "node .",
+    "start": "nodemon .",
     "prepublishOnly": "npm run test"
   },
   "repository": {
@@ -47,12 +47,13 @@
     "src"
   ],
   "dependencies": {
-    "@loopback/context": "^0.11.5",
     "@loopback/boot": "^0.10.8",
+    "@loopback/context": "^0.11.5",
     "@loopback/core": "^0.8.7",
     "@loopback/dist-util": "^0.3.2",
-    "@loopback/rest": "^0.11.2",
-    "@loopback/openapi-v3": "^0.10.8"
+    "@loopback/openapi-v3": "^0.10.8",
+    "@loopback/repository": "^0.13.3",
+    "@loopback/rest": "^0.11.2"
   },
   "devDependencies": {
     "@loopback/build": "^0.6.8",
