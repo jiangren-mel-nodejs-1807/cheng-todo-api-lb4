@@ -30,6 +30,7 @@ export class TodoController {
   @get('/todo')
   async find(@param.query.string('filter') filter?: Filter)
     : Promise<Todo[]> {
+    console.log(filter);
     return await this.todoRepository.find(filter);
   }
 
