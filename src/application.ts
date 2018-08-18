@@ -40,7 +40,7 @@ export class ChengTodoApiApplication extends BootMixin(
 
     const server = await this.getServer(RestServer);
     const port = await server.get(RestBindings.PORT);
-    console.log(`Server is running at http://127.0.0.1:${port}`);
-    console.log(`Try http://127.0.0.1:${port}/ping`);
+    console.log(`Https Server is running at ${server.url}`);
+    console.log(`Try ${server.url}/ping`);
   }
 }
