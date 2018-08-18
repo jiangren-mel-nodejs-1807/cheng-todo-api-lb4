@@ -2,6 +2,8 @@ import { Entity, model, property } from '@loopback/repository';
 
 @model()
 export class Todo extends Entity {
+  @property()
+  todoListId: number;
 
   @property({
     type: 'number',
